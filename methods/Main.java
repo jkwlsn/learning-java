@@ -1,11 +1,11 @@
 public class Main {
 
-    static void printFullName(String fname, String sname) {
-        System.out.println(fname + " " + sname);
+    static String printFullName(String fname, String sname) {
+        return fname + " " + sname;
     }
 
-    static void printFullNameReversed(String fname, String sname) {
-        System.out.println(sname + " " + fname);
+    static String printFullNameReversed(String fname, String sname) {
+        return sname + " " + fname;
     }
 
     public static void main(String[] args) {
@@ -13,12 +13,14 @@ public class Main {
 
         System.out.println("Full names\n");
         for (int i = 0; i < names.length; i++) {
-            printFullName(names[0][i], names[1][i]);
+            String fullName = printFullName(names[0][i], names[1][i]);
+            System.out.println(fullName);
         }
 
         System.out.println("\nFull names reversed\n");
         for (int i = 0; i < names.length; i++) {
-            printFullNameReversed(names[0][i], names[1][i]);
+            String fullNameReversed = printFullNameReversed(names[0][i], names[1][i]);
+            System.out.println(fullNameReversed);
         }
     }
 }
