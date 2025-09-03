@@ -1,11 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        fizzbuzz(3);
-        fizzbuzz(5);
-        fizzbuzz(15);
-        fizzbuzz(28);
-        fizzbuzz(1142421281);
-;
+        int[] numbers = {3, 5, 15, 28, 121313131};
+        for (int n : numbers) {
+            fizzbuzz(n);
+        }
     }
 
     public static void fizzbuzz(int number) {
@@ -17,6 +15,6 @@ public class Main {
         if (number % 5 == 0) {
             output += "Buzz";
         }
-        System.out.println(output);
+        System.out.println(number + " : " + output);
     }
 }
