@@ -1,14 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        int inputNumber = 25;
+        fizzbuzz(3);
+        fizzbuzz(5);
+        fizzbuzz(15);
+        fizzbuzz(28);
+        fizzbuzz(1142421281);
+;
+    }
+
+    public static void fizzbuzz(int number) {
         String output = "";
 
-        System.out.println("Your number is: " + inputNumber);
-
-        if (inputNumber % 3 == 0) {
+        if (number % 3 == 0) {
             output += "Fizz";
         }
-        if (inputNumber % 5 == 0) {
+        if (number % 5 == 0) {
             output += "Buzz";
         }
         System.out.println(output);
