@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 interface Animal {
     public void noise();
     public void move();
@@ -10,9 +12,15 @@ interface Pet {
 
 class Cat implements Animal, Pet {
     String name;
+    short age;
 
-    public Cat(String name) {
+    public Cat(String name, short age) {
         this.name = name;
+        this.age = age;
+    }
+
+    public void age() {
+        System.out.println(this.name + " is " + this.age + " years old");
     }
 
     public void noise() {
@@ -34,10 +42,18 @@ class Cat implements Animal, Pet {
 
 public class Main {
     public static void main(String[] args) {
-        Cat shanie = new Cat("Shanie");
-        shanie.noise();
-        shanie.move();
-        shanie.owned();
-        shanie.address();
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter cat name: ");
+        String catName = input.nextLine();
+        System.out.print("Enter cat age: ");
+        short catAge = input.nextShort();
+
+        Cat myCat = new Cat(catName, catAge);
+        myCat.age();
+        myCat.noise();
+        myCat.move();
+        myCat.owned();
+        myCat.address();
     }
 }
