@@ -12,6 +12,7 @@ public class Main {
         cars.put("Car2",car2);
         cars.put("Car3",car3);
 
+        System.out.println("Using a for each loop");
         for (String car : cars.keySet()) {
             cars.get(car).output();
         }
